@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valhalatec</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="navbar navbar-fixed-bottom">
+    <div class="navbar-inner">
+    <div class="container">
+     
+    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    </a>
+     
+    <!-- Be sure to leave the brand out there if you want it shown -->
+    <a class="brand" href="#">Project name</a>
+     
+    <!-- Everything you want hidden at 940px or less, place within here -->
+    <div class="nav-collapse collapse">
+    <!-- .nav, .navbar-search, .navbar-form, etc -->
+		<u class="nav"><li><%= link_to "Proyectos", proyectos_path %></li></u> 
+		<u class="nav"><li><%= link_to "Empleados", empleados_path %></li></u> 
+   
+
+    </div>
+     
+    </div>
+    </div>
+    </div>
+
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="span9"><%= yield %></div>
+		<div class="span3"><h2>About us</h2>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, ab alias cupiditate. Ipsam, quam id impedit eligendi in earum iste aperiam, neque quis voluptates magnam quia omnis maiores, fugit deleniti.</div>
+	</div>
+
+
+</div>
+
+</body>
+</html>
