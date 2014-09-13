@@ -5,54 +5,127 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+    <title>Advalhtec</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="cd ../cd ../assets/stylesheets/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="cd ../cd ../assets/stylesheets/font-awesome.css" rel="stylesheet" />
+    <!-- MORRIS CHART STYLES-->
+    <!-- CUSTOM STYLES-->
+    <link href="cd ../cd ../assets/stylesheets/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/3.1.0/animate.css">
+
+
+
 </head>
+
+
 <body>
-<div class="navbar navbar-fixed-bottom">
-    <div class="navbar-inner">
-    <div class="container">
-     
-    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    </a>
-     
-    <!-- Be sure to leave the brand out there if you want it shown -->
-    <a class="brand" href="#">Project name</a>
-     
-    <!-- Everything you want hidden at 940px or less, place within here -->
-    <div class="nav-collapse collapse">
-    <!-- .nav, .navbar-search, .navbar-form, etc -->
-		<u class="nav"><li><%= link_to "Proyectos", proyectos_path %></li></u> 
-		<u class="nav"><li><%= link_to "Empleados", empleados_path %></li></u> 
-   
-
-    </div>
-     
-    </div>
-    </div>
-    </div>
 
 
 
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header" data-anijs="if: click, do: flipInY animated">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" data-anijs="if: scroll, on: window, do: swing animated, to: footer" >Valhala-Tec</a>
+            </div>
+            <div style="color: gray;
+            padding: 15px 50px 5px 50px;
+            float: right;
+            font-size: 15px;" data-anijs="if:click, do: hinge animated, to: #main"> Ultimo Acceso : 23 Dic 2014 &nbsp; <a style="background: #20C8FF" href="#" class="btn btn-primary square-btn-adjust">Avances</a> </div>
+        </nav>   <br>
+        <br>
+        <br>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="text-center">
+                        <img src="cd ../cd ../assets/images/find_user1.png" class="user-image img-responsive" id="main" data-anijs="if: load, on: window, do: swing animated"/>
+                        
 
-<div class="container">
-	<% flash.each do |nombre, msg| %>
-	<div class="alert alert-info<%= nombre == :notice ? "succes" : "error" %>">
+                    </li>
+
+
+                    <li>
+                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Indicadores</a>
+                    </li>
+                    <li>
+                        <a  href="ui.html"><i class="fa fa-desktop fa-3x"></i> Monitoreo</a>
+                    </li>
+                    <li>
+                        <a  href="tab-panel.html"><i class="fa fa-qrcode fa-3x"></i>Tareas</a>
+                    </li>
+                    <li  >
+                        <a   href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i>Promedio</a>
+                    </li>   
+                    <li  >
+                        <a  href="table.html"><i class="fa fa-table fa-3x"></i> Table Examples</a>
+                    </li>
+                    <li  >
+                        <a  href="form.html"><i class="fa fa-edit fa-3x"></i> Forms </a>
+                    </li>               
+
+
+                                       <li  >
+                        <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Notas</a>
+                    </li>   
+                </ul>
+
+            </div>
+
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+
+<div class="container" id="contenedor">
+    <% flash.each do |nombre, msg| %>
+    <div class="alert alert-info<%= nombre == :notice ? "succes" : "error" %>">
     <button type="button" class="close" data-dismiss="alert">&times;</button>
-	<%= msg %>
-		
-	</div>
-	<%end%>
-	<div class="row">
-		<div class="span9"><%= yield %></div>
-		<div class="span3"><h2>About us</h2>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, ab alias cupiditate. Ipsam, quam id impedit eligendi in earum iste aperiam, neque quis voluptates magnam quia omnis maiores, fugit deleniti.</div>
-	</div>
+    <%= msg %>
+        
+    </div>
+    <%end%>
+    <div class="row">
+        <div class="span"><%= yield %></div>
+        <div class="span"><h2>About us</h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, ab alias cupiditate. Ipsam, quam id impedit eligendi in earum iste aperiam, neque quis voluptates magnam quia omnis maiores, fugit deleniti.</div>
+    </div>
 
 
 </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="cd ../cd ../assets/javascripts/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="cd ../cd ../assets/javascripts/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="cd ../cd ../assets/javascripts/jquery.metisMenu.js"></script>
+    <!-- MORRIS CHART SCRIPTS -->
+    <!-- CUSTOM SCRIPTS -->
+    <script src="cd ../cd ../assets/javascripts/custom.js"></script>
+    <script src="http://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+    <script src="cd ../cd ../assets/javascripts/jquery.stellar.js"></script>
+    <script src="cd ../cd ../assets/javascripts/skrollr.min.js"></script>
+
 
 </body>
 </html>

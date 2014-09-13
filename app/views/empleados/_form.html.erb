@@ -1,4 +1,7 @@
-<%= form_for @empleado, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for @empleado, :html => { :class => 'form-horizontal' } do |f| %>
+  
+
+
   <div class="control-group">
     <%= f.label :nombre_completo, :class => 'control-label' %>
     <div class="controls">
@@ -7,7 +10,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit nil, :class => 'btn btn-inverse' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 empleados_path, :class => 'btn' %>
   </div>

@@ -49,3 +49,5 @@ end
 gem 'nested_form'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
+gem 'simple_form'
+gem 'responsive_images'
